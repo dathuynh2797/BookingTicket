@@ -8,6 +8,18 @@ export class MovieService {
       method: "GET",
     });
   };
+  layThongTinLichChieuPhim = (maPhim) => {
+    return axios({
+      url: `${domain}/api/QuanLyRap/LayThongTinLichChieuPhim?maPhim=${maPhim}`,
+      method: "GET",
+    });
+  };
+  layThongTinPhongVe = (maLichChieu) => {
+    return axios({
+      url: `${domain}/QuanLyDatVe/LayDanhSachPhongVe?maLichChieu=${maLichChieu}`,
+      method: "GET",
+    });
+  };
 }
 
 export const movieService = new MovieService();
